@@ -18,6 +18,9 @@
 .content_card {
   position: relative;
   margin: 0.5rem;
+  /*&_overlay{
+            display: none;
+        }*/
 }
 
 .content_card_item {
@@ -110,111 +113,116 @@
           transform: rotateX(0) scale(1);
 }
 
-@media screen and (min-width: 768px) {
-  .content_card {
-    /*&_overlay{
-            display: none;
-        }*/
-  }
-  .content_card .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-  }
-  .content_card .modal_content {
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .content_card .modal_close {
-    margin-right: 3rem;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    color: #572EE5;
-    font-size: 2rem;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  .content_card .modal_img {
-    margin: 3rem auto auto auto;
-    display: block;
-    width: 89%;
-    max-width: 43.44rem;
-    max-height: 23rem;
-  }
-  .content_card .modal_self {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .content_card .modal_self_information {
-    margin-top: 1rem;
-  }
-  .content_card .modal_self_information_name {
-    margin: 1rem auto 1rem auto;
-    display: block;
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 15px;
-    color: black;
-    text-align: left;
-  }
-  .content_card .modal_self_information_title {
-    margin: 1rem auto 1rem auto;
-    display: block;
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 16px;
-    color: black;
-    text-align: left;
-  }
-  .content_card .modal_self_button {
-    margin-top: 1rem;
-  }
-  .content_card .modal_self_button_favorite {
-    background-image: url("/icons/icon-fav.svg");
-    background-repeat: no-repeat;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
-  .content_card .modal_self_button_favorite:hover {
-    background-image: url("/icons/icon-fav-hover.svg");
-    background-repeat: no-repeat;
-  }
-  .content_card .modal_self_button_download {
-    background-image: url("/icons/icon-download.svg");
-    background-repeat: no-repeat;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
-  .content_card .modal_self_button_download:hover {
-    background-image: url("/icons/icon-download-hover.svg");
-    background-repeat: no-repeat;
-  }
+.content_card .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.content_card .modal_content {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content_card .modal_close {
+  margin-right: 3rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #572EE5;
+  font-size: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.content_card .modal_img {
+  margin: 3rem auto auto auto;
+  display: block;
+  width: 89%;
+  max-width: 43.44rem;
+  max-height: 23rem;
+}
+
+.content_card .modal_self {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content_card .modal_self_information {
+  margin-top: 1rem;
+}
+
+.content_card .modal_self_information_name {
+  margin: 1rem auto 1rem auto;
+  display: block;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  color: black;
+  text-align: left;
+}
+
+.content_card .modal_self_information_title {
+  margin: 1rem auto 1rem auto;
+  display: block;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+  text-align: left;
+}
+
+.content_card .modal_self_button {
+  margin-top: 1rem;
+}
+
+.content_card .modal_self_button_favorite {
+  background-image: url("/icons/icon-fav.svg");
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.content_card .modal_self_button_favorite:hover {
+  background-image: url("/icons/icon-fav-hover.svg");
+  background-repeat: no-repeat;
+}
+
+.content_card .modal_self_button_download {
+  background-image: url("/icons/icon-download.svg");
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.content_card .modal_self_button_download:hover {
+  background-image: url("/icons/icon-download-hover.svg");
+  background-repeat: no-repeat;
 }
 
 header {
@@ -397,6 +405,9 @@ header .nav_bar .navigation_items .nav_icon {
 .content_card {
   position: relative;
   margin: 0.5rem;
+  /*&_overlay{
+            display: none;
+        }*/
 }
 
 .content_card_item {
@@ -489,111 +500,116 @@ header .nav_bar .navigation_items .nav_icon {
           transform: rotateX(0) scale(1);
 }
 
-@media screen and (min-width: 768px) {
-  .content_card {
-    /*&_overlay{
-            display: none;
-        }*/
-  }
-  .content_card .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-  }
-  .content_card .modal_content {
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .content_card .modal_close {
-    margin-right: 3rem;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    color: #572EE5;
-    font-size: 2rem;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  .content_card .modal_img {
-    margin: 3rem auto auto auto;
-    display: block;
-    width: 89%;
-    max-width: 43.44rem;
-    max-height: 23rem;
-  }
-  .content_card .modal_self {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .content_card .modal_self_information {
-    margin-top: 1rem;
-  }
-  .content_card .modal_self_information_name {
-    margin: 1rem auto 1rem auto;
-    display: block;
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 15px;
-    color: black;
-    text-align: left;
-  }
-  .content_card .modal_self_information_title {
-    margin: 1rem auto 1rem auto;
-    display: block;
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 16px;
-    color: black;
-    text-align: left;
-  }
-  .content_card .modal_self_button {
-    margin-top: 1rem;
-  }
-  .content_card .modal_self_button_favorite {
-    background-image: url("/icons/icon-fav.svg");
-    background-repeat: no-repeat;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
-  .content_card .modal_self_button_favorite:hover {
-    background-image: url("/icons/icon-fav-hover.svg");
-    background-repeat: no-repeat;
-  }
-  .content_card .modal_self_button_download {
-    background-image: url("/icons/icon-download.svg");
-    background-repeat: no-repeat;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
-  .content_card .modal_self_button_download:hover {
-    background-image: url("/icons/icon-download-hover.svg");
-    background-repeat: no-repeat;
-  }
+.content_card .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.content_card .modal_content {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content_card .modal_close {
+  margin-right: 3rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #572EE5;
+  font-size: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.content_card .modal_img {
+  margin: 3rem auto auto auto;
+  display: block;
+  width: 89%;
+  max-width: 43.44rem;
+  max-height: 23rem;
+}
+
+.content_card .modal_self {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content_card .modal_self_information {
+  margin-top: 1rem;
+}
+
+.content_card .modal_self_information_name {
+  margin: 1rem auto 1rem auto;
+  display: block;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  color: black;
+  text-align: left;
+}
+
+.content_card .modal_self_information_title {
+  margin: 1rem auto 1rem auto;
+  display: block;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+  text-align: left;
+}
+
+.content_card .modal_self_button {
+  margin-top: 1rem;
+}
+
+.content_card .modal_self_button_favorite {
+  background-image: url("/icons/icon-fav.svg");
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.content_card .modal_self_button_favorite:hover {
+  background-image: url("/icons/icon-fav-hover.svg");
+  background-repeat: no-repeat;
+}
+
+.content_card .modal_self_button_download {
+  background-image: url("/icons/icon-download.svg");
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.content_card .modal_self_button_download:hover {
+  background-image: url("/icons/icon-download-hover.svg");
+  background-repeat: no-repeat;
 }
 
 .container {
@@ -616,6 +632,9 @@ header .nav_bar .navigation_items .nav_icon {
 .content_card {
   position: relative;
   margin: 0.5rem;
+  /*&_overlay{
+            display: none;
+        }*/
 }
 
 .content_card_item {
@@ -708,111 +727,116 @@ header .nav_bar .navigation_items .nav_icon {
           transform: rotateX(0) scale(1);
 }
 
-@media screen and (min-width: 768px) {
-  .content_card {
-    /*&_overlay{
-            display: none;
-        }*/
-  }
-  .content_card .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-  }
-  .content_card .modal_content {
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .content_card .modal_close {
-    margin-right: 3rem;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    color: #572EE5;
-    font-size: 2rem;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  .content_card .modal_img {
-    margin: 3rem auto auto auto;
-    display: block;
-    width: 89%;
-    max-width: 43.44rem;
-    max-height: 23rem;
-  }
-  .content_card .modal_self {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .content_card .modal_self_information {
-    margin-top: 1rem;
-  }
-  .content_card .modal_self_information_name {
-    margin: 1rem auto 1rem auto;
-    display: block;
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 15px;
-    color: black;
-    text-align: left;
-  }
-  .content_card .modal_self_information_title {
-    margin: 1rem auto 1rem auto;
-    display: block;
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 16px;
-    color: black;
-    text-align: left;
-  }
-  .content_card .modal_self_button {
-    margin-top: 1rem;
-  }
-  .content_card .modal_self_button_favorite {
-    background-image: url("/icons/icon-fav.svg");
-    background-repeat: no-repeat;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
-  .content_card .modal_self_button_favorite:hover {
-    background-image: url("/icons/icon-fav-hover.svg");
-    background-repeat: no-repeat;
-  }
-  .content_card .modal_self_button_download {
-    background-image: url("/icons/icon-download.svg");
-    background-repeat: no-repeat;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
-  .content_card .modal_self_button_download:hover {
-    background-image: url("/icons/icon-download-hover.svg");
-    background-repeat: no-repeat;
-  }
+.content_card .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.content_card .modal_content {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content_card .modal_close {
+  margin-right: 3rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #572EE5;
+  font-size: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.content_card .modal_img {
+  margin: 3rem auto auto auto;
+  display: block;
+  width: 89%;
+  max-width: 43.44rem;
+  max-height: 23rem;
+}
+
+.content_card .modal_self {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content_card .modal_self_information {
+  margin-top: 1rem;
+}
+
+.content_card .modal_self_information_name {
+  margin: 1rem auto 1rem auto;
+  display: block;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  color: black;
+  text-align: left;
+}
+
+.content_card .modal_self_information_title {
+  margin: 1rem auto 1rem auto;
+  display: block;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+  text-align: left;
+}
+
+.content_card .modal_self_button {
+  margin-top: 1rem;
+}
+
+.content_card .modal_self_button_favorite {
+  background-image: url("/icons/icon-fav.svg");
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.content_card .modal_self_button_favorite:hover {
+  background-image: url("/icons/icon-fav-hover.svg");
+  background-repeat: no-repeat;
+}
+
+.content_card .modal_self_button_download {
+  background-image: url("/icons/icon-download.svg");
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.content_card .modal_self_button_download:hover {
+  background-image: url("/icons/icon-download-hover.svg");
+  background-repeat: no-repeat;
 }
 
 .section_1 {
@@ -1109,6 +1133,9 @@ header .nav_bar .navigation_items .nav_icon {
 .content_card {
   position: relative;
   margin: 0.5rem;
+  /*&_overlay{
+            display: none;
+        }*/
 }
 
 .content_card_item {
@@ -1201,111 +1228,116 @@ header .nav_bar .navigation_items .nav_icon {
           transform: rotateX(0) scale(1);
 }
 
-@media screen and (min-width: 768px) {
-  .content_card {
-    /*&_overlay{
-            display: none;
-        }*/
-  }
-  .content_card .modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 50px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-  }
-  .content_card .modal_content {
-    margin: auto;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .content_card .modal_close {
-    margin-right: 3rem;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    color: #572EE5;
-    font-size: 2rem;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    cursor: pointer;
-  }
-  .content_card .modal_img {
-    margin: 3rem auto auto auto;
-    display: block;
-    width: 89%;
-    max-width: 43.44rem;
-    max-height: 23rem;
-  }
-  .content_card .modal_self {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-  }
-  .content_card .modal_self_information {
-    margin-top: 1rem;
-  }
-  .content_card .modal_self_information_name {
-    margin: 1rem auto 1rem auto;
-    display: block;
-    font-family: "Roboto";
-    font-weight: 400;
-    font-size: 15px;
-    color: black;
-    text-align: left;
-  }
-  .content_card .modal_self_information_title {
-    margin: 1rem auto 1rem auto;
-    display: block;
-    font-family: "Roboto";
-    font-weight: 700;
-    font-size: 16px;
-    color: black;
-    text-align: left;
-  }
-  .content_card .modal_self_button {
-    margin-top: 1rem;
-  }
-  .content_card .modal_self_button_favorite {
-    background-image: url("/icons/icon-fav.svg");
-    background-repeat: no-repeat;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
-  .content_card .modal_self_button_favorite:hover {
-    background-image: url("/icons/icon-fav-hover.svg");
-    background-repeat: no-repeat;
-  }
-  .content_card .modal_self_button_download {
-    background-image: url("/icons/icon-download.svg");
-    background-repeat: no-repeat;
-    width: 2rem;
-    height: 2rem;
-    border-radius: 6px;
-    border: none;
-    cursor: pointer;
-  }
-  .content_card .modal_self_button_download:hover {
-    background-image: url("/icons/icon-download-hover.svg");
-    background-repeat: no-repeat;
-  }
+.content_card .modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.content_card .modal_content {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.content_card .modal_close {
+  margin-right: 3rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #572EE5;
+  font-size: 2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.content_card .modal_img {
+  margin: 3rem auto auto auto;
+  display: block;
+  width: 89%;
+  max-width: 43.44rem;
+  max-height: 23rem;
+}
+
+.content_card .modal_self {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.content_card .modal_self_information {
+  margin-top: 1rem;
+}
+
+.content_card .modal_self_information_name {
+  margin: 1rem auto 1rem auto;
+  display: block;
+  font-family: "Roboto";
+  font-weight: 400;
+  font-size: 15px;
+  color: black;
+  text-align: left;
+}
+
+.content_card .modal_self_information_title {
+  margin: 1rem auto 1rem auto;
+  display: block;
+  font-family: "Roboto";
+  font-weight: 700;
+  font-size: 16px;
+  color: black;
+  text-align: left;
+}
+
+.content_card .modal_self_button {
+  margin-top: 1rem;
+}
+
+.content_card .modal_self_button_favorite {
+  background-image: url("/icons/icon-fav.svg");
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.content_card .modal_self_button_favorite:hover {
+  background-image: url("/icons/icon-fav-hover.svg");
+  background-repeat: no-repeat;
+}
+
+.content_card .modal_self_button_download {
+  background-image: url("/icons/icon-download.svg");
+  background-repeat: no-repeat;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+.content_card .modal_self_button_download:hover {
+  background-image: url("/icons/icon-download-hover.svg");
+  background-repeat: no-repeat;
 }
 
 .footer {
