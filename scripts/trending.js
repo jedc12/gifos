@@ -116,6 +116,7 @@ function viewTrending(content, numInicio, numFinal, json){
         let btnScreen = content.querySelectorAll('.content_card_overlay_button_screen');
         let btnScreenImg = content.querySelectorAll('.section_2_slide_carrusel_img');
 
+
         //console.log(btnScreenImg[0].src);
         
         let modal = content.querySelector('.modal');
@@ -152,7 +153,6 @@ function button_full_screen(btnScreen, modal, userName, title, btnDownload) {
             let user = userName[i].textContent;
             let titleGiphy = title[i].textContent;
             let imgpath = btnDownload[i].value;
-            console.log(imgpath);
             modal.style.display = "block";
             fullScreen(modal, imgFull, user, titleGiphy, imgpath);
 
