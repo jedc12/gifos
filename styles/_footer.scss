@@ -1,0 +1,41 @@
+@import './content';
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom:solid;
+    color:#572EE5;
+
+    .footer_paragraph{
+        @include font-shapes('Roboto', 400);
+        @include font-sizes(14px);
+        @include font-color(#000000);
+    }
+
+    &_content{
+        width: auto;
+    }
+
+    &_icon{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 7rem;
+    }
+
+    @media screen and (min-width: 768px){
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+
+        &_content{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 16rem;
+        }
+
+    }
+}
