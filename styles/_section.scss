@@ -275,3 +275,19 @@
         }
     }
 }
+
+
+.section_3_favorite{
+    &_title{
+        text-align: center;
+
+        &_text{
+            margin-top: 0.5rem;
+            @include font-shapes('Montserrat', 700);
+            @include font-sizes(25px);
+            @include font-color(#572EE5);
+            text-align: center;
+            line-height: 30px;            
+        }
+    }
+}

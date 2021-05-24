@@ -206,7 +206,7 @@
     
                     &_favorite{
         
-                        background-image: url('./icons/icon-fav.svg');
+                        background-image: url('/icons/icon-fav.svg');
                         background-repeat:no-repeat;
                         width: 2rem;
                         height: 2rem;
@@ -217,7 +217,7 @@
             
                         &:hover{
                             
-                            background-image: url('./icons/icon-fav-hover.svg');
+                            background-image: url('/icons/icon-fav-hover.svg');
                             background-repeat:no-repeat;
                             //background-position: 100%;
                         }

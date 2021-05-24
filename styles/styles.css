@@ -196,7 +196,7 @@
 }
 
 .content_card .modal_self_button_favorite {
-  background-image: url("./icons/icon-fav.svg");
+  background-image: url("/icons/icon-fav.svg");
   background-repeat: no-repeat;
   width: 2rem;
   height: 2rem;
@@ -206,7 +206,7 @@
 }
 
 .content_card .modal_self_button_favorite:hover {
-  background-image: url("./icons/icon-fav-hover.svg");
+  background-image: url("/icons/icon-fav-hover.svg");
   background-repeat: no-repeat;
 }
 
@@ -583,7 +583,7 @@ header .nav_bar .navigation_items .nav_icon {
 }
 
 .content_card .modal_self_button_favorite {
-  background-image: url("./icons/icon-fav.svg");
+  background-image: url("/icons/icon-fav.svg");
   background-repeat: no-repeat;
   width: 2rem;
   height: 2rem;
@@ -593,7 +593,7 @@ header .nav_bar .navigation_items .nav_icon {
 }
 
 .content_card .modal_self_button_favorite:hover {
-  background-image: url("./icons/icon-fav-hover.svg");
+  background-image: url("/icons/icon-fav-hover.svg");
   background-repeat: no-repeat;
 }
 
@@ -810,7 +810,7 @@ header .nav_bar .navigation_items .nav_icon {
 }
 
 .content_card .modal_self_button_favorite {
-  background-image: url("./icons/icon-fav.svg");
+  background-image: url("/icons/icon-fav.svg");
   background-repeat: no-repeat;
   width: 2rem;
   height: 2rem;
@@ -820,7 +820,7 @@ header .nav_bar .navigation_items .nav_icon {
 }
 
 .content_card .modal_self_button_favorite:hover {
-  background-image: url("./icons/icon-fav-hover.svg");
+  background-image: url("/icons/icon-fav-hover.svg");
   background-repeat: no-repeat;
 }
 
@@ -1113,6 +1113,20 @@ header .nav_bar .navigation_items .nav_icon {
   }
 }
 
+.section_3_favorite_title {
+  text-align: center;
+}
+
+.section_3_favorite_title_text {
+  margin-top: 0.5rem;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 25px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 30px;
+}
+
 .container {
   position: relative;
   margin-top: 6.5rem;
@@ -1311,7 +1325,7 @@ header .nav_bar .navigation_items .nav_icon {
 }
 
 .content_card .modal_self_button_favorite {
-  background-image: url("./icons/icon-fav.svg");
+  background-image: url("/icons/icon-fav.svg");
   background-repeat: no-repeat;
   width: 2rem;
   height: 2rem;
@@ -1321,7 +1335,7 @@ header .nav_bar .navigation_items .nav_icon {
 }
 
 .content_card .modal_self_button_favorite:hover {
-  background-image: url("./icons/icon-fav-hover.svg");
+  background-image: url("/icons/icon-fav-hover.svg");
   background-repeat: no-repeat;
 }
 
