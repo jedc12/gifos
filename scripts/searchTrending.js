@@ -1,5 +1,7 @@
 import { getDataSeeker, getSearchEndpoint } from "./connection.js";
 
+import { getDataFavorite} from "./favorite.js";
+
 const select = document.querySelector(".section_1_search_icon_img_input");
 const input = document.querySelector(".section_1_search_input");
 const view = document.querySelector(".section_1_search_lists");
@@ -134,7 +136,7 @@ function viewSearchEndpoint(json) {
             section_1_result_img.innerHTML += `<div class="content_card">
                                                     <img src="${datos.images.original.url}" class="content_card_item" alt="">
                                                     <div class="content_card_overlay">
-                                                        <button class="content_card_overlay_button_favorite"></button>
+                                                        <button class="content_card_overlay_button_favorite" value="${datos}"></button>
                                                         <button class="content_card_overlay_button_download" value="${datos.images.original.url}"></button>
                                                         <button class="content_card_overlay_button_screen" value="${datos.images.original.url}"></button>
                                                         <h5 class="content_card_overlay_user" >${datos.username}</h5>
@@ -145,6 +147,7 @@ function viewSearchEndpoint(json) {
 
             let btnDownload = section_1_result_img.querySelectorAll('.content_card_overlay_button_download');
 
+            //función para descargar gif.
             button_download(btnDownload);
 
             let btnScreen = section_1_result_img.querySelectorAll('.content_card_overlay_button_screen');
@@ -155,8 +158,14 @@ function viewSearchEndpoint(json) {
             let userName = section_1_result_img.querySelectorAll('.content_card_overlay_user');
             let title = section_1_result_img.querySelectorAll('.content_card_overlay_title');
 
+            //función para poner pantalla full en un dispositivo de escritorio.
             button_full_screen(btnScreen, modal, userName, title, btnDownload);
+
+            //función para poner pantalla full en un dispositivo movil.
             button_full_screen(btnScreenImg, modal, userName, title, btnDownload);
+
+            let btnFavorite = section_1_result_img.querySelectorAll('.content_card_overlay_button_favorite');
+            button_favorite(btnFavorite);
         });
     }
 
@@ -164,6 +173,20 @@ function viewSearchEndpoint(json) {
 
     content.appendChild(section_1_result_img);
 }
+
+//funcion para agregar favoritos
+
+function button_favorite(btnFavorite){
+    for(let i = 0; i < btnFavorite.length; i++){
+        btnFavorite[i].addEventListener("click", lists=>{
+            console.log('función favorite ');
+            console.log(lists.images.original.url);
+            getDataFavorite(lists);
+            
+        })
+    }
+}
+
 
 //Función para descargar giphy
 function button_download(btnDowload) {

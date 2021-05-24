@@ -290,4 +290,17 @@
             line-height: 30px;            
         }
     }
+
+    &_content{
+        margin-top: 6rem;
+        
+        &_message{
+            text-align: center;
+            .section_paragraph_item{
+                @include font-color(#50E3C2);
+                @include font-sizes(22px);
+                @include font-shapes('Montserrat', 700);
+            }
+        }
+    }
 }

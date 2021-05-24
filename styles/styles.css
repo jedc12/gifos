@@ -1127,6 +1127,21 @@ header .nav_bar .navigation_items .nav_icon {
   line-height: 30px;
 }
 
+.section_3_favorite_content {
+  margin-top: 6rem;
+}
+
+.section_3_favorite_content_message {
+  text-align: center;
+}
+
+.section_3_favorite_content_message .section_paragraph_item {
+  color: #50E3C2;
+  font-size: 22px;
+  font-family: "Montserrat";
+  font-weight: 700;
+}
+
 .container {
   position: relative;
   margin-top: 6.5rem;
