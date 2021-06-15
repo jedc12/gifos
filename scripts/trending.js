@@ -1,4 +1,5 @@
 import {getData} from "./connection.js";
+import {getDataFavorite} from "./favorite.js";
 
 /*const dominio = 'https://api.giphy.com/v1/gifs/';
 const ruta = 'trending';
@@ -99,7 +100,7 @@ function viewTrending(content, numInicio, numFinal, json){
         content.innerHTML += `<div class="content_card">
                                <img class="section_2_slide_carrusel_img" src="${json[iterar].images.original.url}">
                                <div class="content_card_overlay">
-                                    <button class="content_card_overlay_button_favorite"></button>
+                                    <button class="content_card_overlay_button_favorite" value="${json[iterar].images.original.url}"></button>
                                     <button class="content_card_overlay_button_download" value="${json[iterar].images.original.url}"></button>
                                     <button class="content_card_overlay_button_screen" value="${json[iterar].images.original.url}"></button>
                                     <h5 class="content_card_overlay_user" >${json[iterar].username}</h5>
@@ -128,11 +129,44 @@ function viewTrending(content, numInicio, numFinal, json){
         button_full_screen(btnScreen, modal, userName, title, btnDownload);
         
         button_full_screen(btnScreenImg, modal, userName, title, btnDownload);
+
+        let btnFavorite = content.querySelectorAll('.content_card_overlay_button_favorite');
+            
+        button_favorite(btnFavorite, userName, title);
                   
        
     }
 
     
+}
+
+//funcion para agregar favoritos
+
+function button_favorite(btnFavorite, userName, title){
+    for(let i = 0; i < btnFavorite.length; i++){
+        btnFavorite[i].addEventListener("click", lists=>{
+            console.log('función favorite ');
+            //console.log(lists.target.value);
+            
+
+            //let img = lists.target.value;
+            //let user = userName[i].textContent;
+            //let titleGiphy = title[i].textContent;
+
+           let data = {
+            img : lists.target.value,
+            user : userName[i].textContent,
+            titleGiphy : title[i].textContent
+           }
+
+           
+           getDataFavorite(data);
+            
+            //let b = document.querySelector('.section_3_favorite_content_message');
+
+            //b.innerHTML = a;
+        })
+    }
 }
 
 function button_full_screen(btnScreen, modal, userName, title, btnDownload) {

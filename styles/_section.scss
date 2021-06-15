@@ -278,6 +278,7 @@
 
 
 .section_3_favorite{
+    display: none;
     &_title{
         text-align: center;
 
@@ -300,7 +301,34 @@
                 @include font-color(#50E3C2);
                 @include font-sizes(22px);
                 @include font-shapes('Montserrat', 700);
+                white-space: pre-line;
+            }
+        }
+
+        &_img{
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            align-items: center;
+            grid-gap:1rem;
+
+            
+        }
+    }
+
+    @media screen and(min-width: 768px){
+
+        &_content{
+            &_img{
+                margin: 5rem 1rem;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-template-rows: auto;
+                align-items: center;
+                grid-gap:0.5rem;
             }
         }
     }
+
 }

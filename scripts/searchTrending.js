@@ -1,6 +1,6 @@
 import { getDataSeeker, getSearchEndpoint } from "./connection.js";
 
-import { getDataFavorite} from "./favorite.js";
+import { getDataFavorite } from "./favorite.js";
 
 const select = document.querySelector(".section_1_search_icon_img_input");
 const input = document.querySelector(".section_1_search_input");
@@ -131,12 +131,15 @@ function viewSearchEndpoint(json) {
         section_1_result_img.classList.remove('section_1_result_not_found_img');
         section_1_result_img.classList.add('section_1_result_img');
 
-        json.data.forEach((datos) => {
+        json.data.forEach( datos => {
+            
+            //console.log(datos);
+            
 
             section_1_result_img.innerHTML += `<div class="content_card">
                                                     <img src="${datos.images.original.url}" class="content_card_item" alt="">
                                                     <div class="content_card_overlay">
-                                                        <button class="content_card_overlay_button_favorite" value="${datos}"></button>
+                                                        <button class="content_card_overlay_button_favorite" value="${datos.images.original.url}"></button>
                                                         <button class="content_card_overlay_button_download" value="${datos.images.original.url}"></button>
                                                         <button class="content_card_overlay_button_screen" value="${datos.images.original.url}"></button>
                                                         <h5 class="content_card_overlay_user" >${datos.username}</h5>
@@ -165,7 +168,10 @@ function viewSearchEndpoint(json) {
             button_full_screen(btnScreenImg, modal, userName, title, btnDownload);
 
             let btnFavorite = section_1_result_img.querySelectorAll('.content_card_overlay_button_favorite');
-            button_favorite(btnFavorite);
+            
+            button_favorite(btnFavorite, userName, title);
+            
+           
         });
     }
 
@@ -176,13 +182,29 @@ function viewSearchEndpoint(json) {
 
 //funcion para agregar favoritos
 
-function button_favorite(btnFavorite){
+function button_favorite(btnFavorite, userName, title){
     for(let i = 0; i < btnFavorite.length; i++){
         btnFavorite[i].addEventListener("click", lists=>{
             console.log('función favorite ');
-            console.log(lists.images.original.url);
-            getDataFavorite(lists);
+            //console.log(lists.target.value);
             
+
+            //let img = lists.target.value;
+            //let user = userName[i].textContent;
+            //let titleGiphy = title[i].textContent;
+
+           let data = {
+            img : lists.target.value,
+            user : userName[i].textContent,
+            titleGiphy : title[i].textContent
+           }
+
+           
+           getDataFavorite(data);
+            
+            //let b = document.querySelector('.section_3_favorite_content_message');
+
+            //b.innerHTML = a;
         })
     }
 }
@@ -194,6 +216,7 @@ function button_download(btnDowload) {
     for (let i = 0; i < btnDowload.length; i++) {
         btnDowload[i].addEventListener("click", lists => {
 
+            
             let imgpath = lists.target.value;
             let fileName = getFileName(imgpath);
 
@@ -305,3 +328,5 @@ function main() {
 }
 
 main();
+
+export{button_favorite};

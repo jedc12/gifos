@@ -1113,6 +1113,10 @@ header .nav_bar .navigation_items .nav_icon {
   }
 }
 
+.section_3_favorite {
+  display: none;
+}
+
 .section_3_favorite_title {
   text-align: center;
 }
@@ -1140,6 +1144,36 @@ header .nav_bar .navigation_items .nav_icon {
   font-size: 22px;
   font-family: "Montserrat";
   font-weight: 700;
+  white-space: pre-line;
+}
+
+.section_3_favorite_content_img {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  grid-gap: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .section_3_favorite_content_img {
+    margin: 5rem 1rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    grid-gap: 0.5rem;
+  }
 }
 
 .container {

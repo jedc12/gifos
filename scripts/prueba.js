@@ -1,114 +1,89 @@
-//import {getData} from "./trending.js";
+//import { getData } from "./connection";
 
-/*const dominio = 'https://api.giphy.com/v1/gifs/';
-const ruta = 'search/tags';
-const apiKey = 'tYonuj9Qetdbi6UFjAibCWg9IRO2Jomz';
-const search = 'q';
-const limit = '4';*/
+const content = document.querySelector(".section_3_favorite_content");
+let localStorageData = 'data';
 
-//search?api_key=tYonuj9Qetdbi6UFjAibCWg9IRO2Jomz&q=vegeta&limit=25&offset=0&rating=g&lang=en
 
-//search?api_key=tYonuj9Qetdbi6UFjAibCWg9IRO2Jomz&${search}={text}&limit=12&offset=0&rating=g&lang=en
 
-/*async function getDataSeeker(text) {
-    const response = await fetch(`${dominio}${ruta}?api_key=${apiKey}&${search}=${text}&limit=${limit}&offset=0`);
-    const json = await response.json();
-    SearchData(json);
+
+function getDataFavorite(data){
+
+    let information = [];
+    let  dataInLocalStorage = localStorage.getItem(localStorageData);
+   
+    if(dataInLocalStorage !== null){
+        information = JSON.parse(dataInLocalStorage);
+    }else
+
+
+    //console.log(information);    
+
+    information.push(data);
+
+
+    localStorage.setItem(localStorageData, JSON.stringify(information));
+    console.log(information);
+
+    viewDataFavorite();    
+};
+
+
+
+function viewDataFavorite(){
+
     
-}
-
-async function getSearchEndpoint(text){
-    const response = await fetch(`${dominio}search?api_key=tYonuj9Qetdbi6UFjAibCWg9IRO2Jomz&${search}=${text}&limit=12&offset=0&rating=g&lang=en`);
-    const json = await response.json();
-    
-    viewSearchEndpoint(json);
-}*/
-
-const dominio = 'https://api.giphy.com/v1/gifs/';
-const ruta = 'search/tags';
-const apiKey = 'tYonuj9Qetdbi6UFjAibCWg9IRO2Jomz';
-const search = 'q';
-const limit = '4';
+    //let dataInLocalStorage = localStorage.getItem(localStorageData);
 
 
-async function getData(text) {
-    const response = await fetch(`${dominio}${ruta}?api_key=${apiKey}&${search}=${text}&limit=${limit}&offset=0`);
-    const json = await response.json();
-    SearchData(json);
-}
+    content.style.display = 'contents'
+    const contentFavorite = document.createElement('div');
 
+    content.innerHTML= '';
 
+    if(localStorage.getItem(localStorageData)){
+        contentFavorite.classList.remove('section_3_favorite_content_message');        
+        contentFavorite.classList.add('section_3_favorite_content_img');
 
-const input = document.querySelector(".section_1_search_input");
-const select = document.querySelector(".section_1_search_icon_img");
-const view = document.querySelector(".section_1_search_lists");
-
-function runInput() {
-    const text = input.value;
-
-    if (text === '' || text === undefined) {
-        view.innerHTML = '';
-        iconSearch(true);
-    } else {
-       // input.image = ('./icons/icon-search.svg');
-        getData(text);
-        iconSearch(false);
+        let information = JSON.parse(localStorage.getItem(localStorageData))
+        //let data =  JSON.parse(localStorage.getItem(localStorageData));
+      
+        console.log(information);  
         
-    }
-    input.addEventListener('keyup', runInput);
-}
 
-
-function SearchData(json) {
-
-
-    view.innerHTML = '';
-    //const icon = src('./icons/icon-search-modo-noct.svg');
-
-    for (let iterar of json.data) {
-
-        view.innerHTML += `<option value="${iterar.name}" class = "section_1_search_list">${iterar.name}</option>`;
-        //<img src = "./icons/icon-search.svg">
-
-        let data = view.querySelectorAll('li');
-
-        for (let i = 0; i < data.length; i++) {
-            data[i].setAttribute("onclick", 'selection(this)');
+        for(let i = 0; i < information.length; i++){
+            contentFavorite.innerHTML += `<div class="content_card">
+                                                <img src="${information[i].img}" class="content_card_item" alt="">
+                                                <div class="content_card_overlay">
+                                                    <button class="content_card_overlay_button_favorite" value=""></button>
+                                                    <button class="content_card_overlay_button_download" value=""></button>
+                                                    <button class="content_card_overlay_button_screen" value=""></button>
+                                                    <h5 class="content_card_overlay_user" >${information[i].user}</h5>
+                                                    <h6 class="content_card_overlay_title">${information[i].titleGiphy}</h6>
+                                                </div>
+                                                <div class="modal" ></div>
+                                            </div>`
+            console.log(information[i]);
         }
 
-    }
-}
-
-function selection(element) {
-    let selectData = element.textContent;
-
-    input.value = selectData;
-
-
-    view.innerHTML = '';
-}
-
-const iconSearch = icon => {    
-
-    const iconImg = document.querySelector('.section_1_search_icon_img');
-    //let buttonImg;
-
-    if(icon){
-        iconImg.src = ('./icons/icon-search.svg');
-        
+        console.log('Estoy en el verdadero');
     }else{
-        iconImg.src = ('./icons/Button-close-hover-modo-noc.svg');
-        
-        iconImg.addEventListener('click', () =>{
-            input.value = '';
-            runInput();
-        })
-        
+
+        contentFavorite.classList.remove('section_3_favorite_content_img');
+        contentFavorite.classList.add('section_3_favorite_content_message');
+
+        contentFavorite.innerHTML = `<img class="section_3_favorite_content_message_img" src="icons/icon-fav-sin-contenido.svg" alt="icon-fav-sin-contenido.svg">
+                                     <p class="section_paragraph_item">"¡Guarda tu primer Gifo en Favoritos
+                                     para que se muestre aquí"</p>`
+
+        console.log('Estoy en el falso');
     }
 
-    
+    content.appendChild(contentFavorite);
+   // localStorage.removeItem('data');
 }
 
-//select.addEventListener('click', runInput);
+export { getDataFavorite };
 
-runInput();
+
+viewDataFavorite();
+
