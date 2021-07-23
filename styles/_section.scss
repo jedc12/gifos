@@ -1,9 +1,9 @@
 @import './content';
 
 .section_1{
+    display: none;
     position: relative;
     @include font-alignment(center);
-    display: block;
 
     .section_title{
         margin: 6rem auto auto;
@@ -122,14 +122,14 @@
        }
 
        &_button{
-        border: 0.08rem solid #572EE5;
-        border-radius: 2.8rem;
-        background-color:white;
-        color: #572EE5;
-        height: 3rem;
-        width: 8rem;
+            border: 0.08rem solid #572EE5;
+            border-radius: 2.8rem;
+            background-color:white;
+            color: #572EE5;
+            height: 3rem;
+            width: 8rem;
        }
-   }
+    }
 
     @media screen and(min-width: 768px){
         .section_title{
@@ -158,7 +158,7 @@
                     width: 12.5rem;
                     height: 12.5rem;
                 }
-               }
+            }
         }
     }
 }
@@ -221,13 +221,6 @@
        
 
     }
-    /*@media screen and(min-width: 768px){
-        &_slide{
-            overflow-x: hidden;
-        }
-    }*/
-
-
 
     @media screen and(min-width: 768px){
         &_slide{ 
@@ -331,4 +324,175 @@
         }
     }
 
+}
+
+.section_4_gifos{
+
+    text-align: center;
+
+    &_elements{
+        display: flex;
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+        &_camara{
+
+            align-self: center;
+
+            &_img{
+
+                width: 60%;
+            }
+
+            /*position: relative;
+            top: 16rem;
+            left: 7rem;*/
+
+            &_img_luz{
+                position: relative;
+                bottom: 0.7rem;
+                right: 0.2rem;
+                width: 36%;
+            }
+
+            &_img_pelicula{
+                align-self: flex-end;
+                width: 11%;
+                margin-left: 1rem;
+
+                /*position: relative;
+                left: 67rem;
+                bottom: 5rem;*/
+            }
+        }
+
+
+        &_content{
+
+           // margin: auto;
+            width: 43rem;
+            height: 24.38rem;
+            border: 1px solid #572EE5;
+
+            .section_title{
+                margin: auto;
+                color: #572EE5;
+                width: 30rem;
+            }
+
+
+
+            &_borders{
+
+                &_top{
+                    position: relative;
+                    margin: 1.5rem 0 0 1.5rem;
+                    height: 2.08rem;
+                    width: 2.25rem;
+                    border-top: 1px solid #50E3C2;
+                    border-left: 1px solid #50E3C2;
+
+                    &::before{
+                        position: absolute;
+                        //right: -36.5rem;
+                        right: -37.4rem;
+                        content: "";
+                        height: 2.08rem;
+                        width: 2.25rem;
+                        transform: rotate(-270deg);
+                        border-top: 1px solid #50E3C2;
+                        border-left: 1px solid #50E3C2;
+
+                    }
+                }
+
+                &_bottom{
+                    position: relative;
+                    //top: 3rem;
+                    //margin: 0 0 2rem 2rem;
+                    margin: 0.5rem 0 0 1.5rem;
+                    height: 2.08rem;
+                    width: 2.25rem;
+                    border-top: 1px solid #50E3C2;
+                    border-left: 1px solid #50E3C2;
+                    transform: rotate(-90deg);
+
+                    &::before{
+                        position: absolute;
+                        top: 37.5rem;
+                        right: 0.5rem;
+                        content: "";
+                        height: 2.08rem;
+                        width: 2.25rem;
+                        transform: rotate(-270deg);
+                        border-top: 1px solid #50E3C2;
+                        border-left: 1px solid #50E3C2;
+                        transform: rotate(270deg);
+
+                    }
+                }
+
+            }
+
+            &_video{
+                
+                display: contents;
+                
+                &_gif{
+                    position: relative;
+                    width: 28.5rem;
+                    height: 16rem;
+                }
+            }
+
+        }
+    }
+
+    &_call_action{
+
+        position: relative;
+
+        margin: 1.5rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        
+
+        &_bottom{
+            margin: 0 0.8rem;
+            padding: 0.5rem;
+            border: 1px solid #572EE5;
+            border-radius: 1em;
+            text-align: center;
+            color: #572EE5;
+            width: 0.9rem;
+            height: 1rem;
+            cursor: default;
+
+            &_stopwatch{
+                position: absolute;
+                right: 21%;
+                color: #572EE5;
+            }
+        }
+
+        &_border{
+            margin:auto;
+            border: 4px solid #572EE5;
+            border-radius: 4px;
+            width: 65%;
+        }
+    }
+    
+    &_bottom{
+        margin-top: 1rem;
+        border: 0.08rem solid #572EE5;
+        border-radius: 2.8rem;
+        background-color:white;
+        color: #572EE5;
+        height: 3rem;
+        cursor: pointer;
+    }
+    
 }

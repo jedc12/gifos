@@ -840,9 +840,9 @@ header .nav_bar .navigation_items .nav_icon {
 }
 
 .section_1 {
+  display: none;
   position: relative;
   text-align: center;
-  display: block;
 }
 
 .section_1 .section_title {
@@ -1018,11 +1018,6 @@ header .nav_bar .navigation_items .nav_icon {
   margin: 6rem 0 2.5rem 0;
   background-color: #F3F5F8;
   height: 35.83rem;
-  /*@media screen and(min-width: 768px){
-        &_slide{
-            overflow-x: hidden;
-        }
-    }*/
 }
 
 .section_2 .section_title {
@@ -1174,6 +1169,176 @@ header .nav_bar .navigation_items .nav_icon {
             align-items: center;
     grid-gap: 0.5rem;
   }
+}
+
+.section_4_gifos {
+  text-align: center;
+}
+
+.section_4_gifos_elements {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.section_4_gifos_elements_camara {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  /*position: relative;
+            top: 16rem;
+            left: 7rem;*/
+}
+
+.section_4_gifos_elements_camara_img {
+  width: 60%;
+}
+
+.section_4_gifos_elements_camara_img_luz {
+  position: relative;
+  bottom: 0.7rem;
+  right: 0.2rem;
+  width: 36%;
+}
+
+.section_4_gifos_elements_camara_img_pelicula {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  width: 11%;
+  margin-left: 1rem;
+  /*position: relative;
+                left: 67rem;
+                bottom: 5rem;*/
+}
+
+.section_4_gifos_elements_content {
+  width: 43rem;
+  height: 24.38rem;
+  border: 1px solid #572EE5;
+}
+
+.section_4_gifos_elements_content .section_title {
+  margin: auto;
+  color: #572EE5;
+  width: 30rem;
+}
+
+.section_4_gifos_elements_content_borders_top {
+  position: relative;
+  margin: 1.5rem 0 0 1.5rem;
+  height: 2.08rem;
+  width: 2.25rem;
+  border-top: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+}
+
+.section_4_gifos_elements_content_borders_top::before {
+  position: absolute;
+  right: -37.4rem;
+  content: "";
+  height: 2.08rem;
+  width: 2.25rem;
+  -webkit-transform: rotate(-270deg);
+          transform: rotate(-270deg);
+  border-top: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+}
+
+.section_4_gifos_elements_content_borders_bottom {
+  position: relative;
+  margin: 0.5rem 0 0 1.5rem;
+  height: 2.08rem;
+  width: 2.25rem;
+  border-top: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.section_4_gifos_elements_content_borders_bottom::before {
+  position: absolute;
+  top: 37.5rem;
+  right: 0.5rem;
+  content: "";
+  height: 2.08rem;
+  width: 2.25rem;
+  -webkit-transform: rotate(-270deg);
+          transform: rotate(-270deg);
+  border-top: 1px solid #50E3C2;
+  border-left: 1px solid #50E3C2;
+  -webkit-transform: rotate(270deg);
+          transform: rotate(270deg);
+}
+
+.section_4_gifos_elements_content_video {
+  display: contents;
+}
+
+.section_4_gifos_elements_content_video_gif {
+  position: relative;
+  width: 28.5rem;
+  height: 16rem;
+}
+
+.section_4_gifos_call_action {
+  position: relative;
+  margin: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.section_4_gifos_call_action_bottom {
+  margin: 0 0.8rem;
+  padding: 0.5rem;
+  border: 1px solid #572EE5;
+  border-radius: 1em;
+  text-align: center;
+  color: #572EE5;
+  width: 0.9rem;
+  height: 1rem;
+  cursor: default;
+}
+
+.section_4_gifos_call_action_bottom_stopwatch {
+  position: absolute;
+  right: 21%;
+  color: #572EE5;
+}
+
+.section_4_gifos_call_action_border {
+  margin: auto;
+  border: 4px solid #572EE5;
+  border-radius: 4px;
+  width: 65%;
+}
+
+.section_4_gifos_bottom {
+  margin-top: 1rem;
+  border: 0.08rem solid #572EE5;
+  border-radius: 2.8rem;
+  background-color: white;
+  color: #572EE5;
+  height: 3rem;
+  cursor: pointer;
 }
 
 .container {

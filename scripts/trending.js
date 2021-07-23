@@ -18,7 +18,8 @@ function getTrendings(){
 
         getData().then(json =>{
             //json.data.forEach((datos) => {
-                Trending(json);                       
+                Trending(json);        
+                            
             //});
         })
         
